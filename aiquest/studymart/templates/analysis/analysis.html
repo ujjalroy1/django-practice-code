@@ -1,0 +1,28 @@
+{% comment %} {% load static %}
+<html>
+     <head>
+        <link rel="stylesheet" href="{% static 'css/analysis.css' %}">
+        <style type="text/css">
+                     h1{
+                        color:black;
+                     }
+        </style>
+     </head>
+     <body>
+        <h1>This is from data analysis apps first call</h1>
+        <p>This is paragraph</p>
+         (a+b)<sup>2</sup>
+        <div class="hello">
+             <pre>
+                  hello I am Ujjal
+                                   How are you
+             </pre>
+             <p>
+               this is inside div
+             </p>
+        </div>
+      </body>
+</html> {% endcomment %}
+
+{% extends "common_code/base.html" %}
+{% block title %}Blogs{% endblock title %}

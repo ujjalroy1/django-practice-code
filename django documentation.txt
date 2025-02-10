@@ -1,0 +1,44 @@
+1.django-admin startproject myproject
+
+2.for run the project
+python manage.py runserver
+
+3.next we need to create an app
+python manage.py startapp machine_learning
+4.now we need to go project folder and need to register in installed app that we create we get it in setting
+5.now we create a view from our apps
+6.now we need to create an URL that we got in project folder
+
+Now for creating virtual environment 
+1.first need to uninstall previous django
+pip uninstall django
+2.now we will go a folder where we create virtual environment and run the command
+python -m venv env
+3.now we need to activate it so we will enter Scripts folder and run
+activate
+4.now we check django is installed or not in our virtual invironment command
+pip list
+5.now we need install django
+pip install django
+6.now we create a project
+django-admin startproject studymart
+7.now We will open it in vs code 
+and if virtual environment is not start run the command
+.\env\Scripts\activate
+8.after setup virtual environment we will enter project folder studymar(cd studymart) and then create a app
+python manage.py startapp machine_learning
+9.now we need register app in setting folder
+10.when we creare an app it must register.
+11.for creating templates
+we will create a folder in project then creates 'templates' folder after that we go to settings folder and create a variable TEMPLATE_DIR under BASE_DIR and import os
+TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
+now registration it on 
+'DIRS': [TEMPLATE_DIR],
+12.then we create html file in templates folder
+and the we call it from view by render
+return render(request,'machine_learning.html')
+13.now we create a static folder in project then we go to settings folder after that we create a variable and join with base directory
+STATIC_DIR=os.path.join(BASE_DIR,'static')
+after that we search static_url under that use register our STATUC_DIR
+STATICFILES_DIRS=[STATIC_DIR,]
+14.now we create a style.css file in static folder and we connect it in html file 
