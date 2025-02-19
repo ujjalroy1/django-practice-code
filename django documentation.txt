@@ -42,3 +42,10 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 after that we search static_url under that use register our STATUC_DIR
 STATICFILES_DIRS=[STATIC_DIR,]
 14.now we create a style.css file in static folder and we connect it in html file 
+15.for migration
+python manage.py makemigrations
+16.for migrate
+python manage.py sqlmigrate About_Us 0001
+or python manage.py migrate
+17. For creating super user(this for geting id and password for admin section)
+python manage.py createsuperuser

@@ -1,0 +1,21 @@
+<html>
+     <head></head>
+     <body>
+            <table>
+                   <tr>
+                       <th>ID</th>
+                       <th>TID</th>
+                       <th>TName</th>
+                       <th>TEmail</th>
+                   </tr>
+                   {% for x in thr %}
+                   <tr>
+                       <td>{{x.id}}</td>
+                       <td>{{x.tid}}</td>
+                       <td>{{x.tname}}</td>
+                       <td>{{x.temail}}</td>
+                   </tr>
+                  {% endfor %}
+            </table>
+     </body>
+</html>

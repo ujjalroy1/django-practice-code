@@ -10,20 +10,20 @@
      <body>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
          <div class="container-fluid">
-           <a class="navbar-brand" href="#">About</a>
+           <a class="navbar-brand" href="{% url 'about_us' %}">About</a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
            </button>
            <div class="collapse navbar-collapse" id="navbarNavDropdown">
              <ul class="navbar-nav">
                <li class="nav-item">
-                 <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+                 <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blogs</a>
                </li>
                <li class="nav-item">
-                 <a class="nav-link" href="#">Data analysis</a>
+                 <a class="nav-link" href="{% url 'analysis' %}">Data analysis</a>
                </li>
                <li class="nav-item">
-                 <a class="nav-link" href="#">Deep learning</a>
+                 <a class="nav-link" href="{% url 'deeplearning' %}">Deep learning</a>
                </li>
                <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,10 +39,10 @@
            </div>
          </div>
        </nav>
-
-       <img src="{% static "images/ujjal roy.jpg" %}" class="rounded float-start" alt="..." height="400px" width="500px">
+       {% block indentity %}{% endblock indentity %}
+       {% comment %} <img src="{% static "images/ujjal roy.jpg" %}" class="rounded float-start" alt="..." height="400px" width="500px">
        <img src="{% static "images/aa.png" %}" class="rounded float-end" alt="...">
-       <img src="{% static "images/contest.jpg" %}" class="img-fluid" alt="...">
+       <img src="{% static "images/contest.jpg" %}" class="img-fluid" alt="..."> {% endcomment %}
 
 
    
